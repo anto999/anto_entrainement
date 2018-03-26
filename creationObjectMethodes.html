@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const champion = {
+        	name : "Anthony",
+        	age : 30,
+        	tournamentWon : 12,
+        	taille : 180,
+        	prefferedFood : "La pizza del luigi" ,
+
+       	 					
+        }
+        console.log(`L : Salut ${champion.name} veux tu jouer avec moi ? `)
+
+        const adversaire = {
+        	name : "Mickael",
+        	age : 26 ,
+        	tournamentWon : 7,
+        	taille : 185,
+        	prefferedFood : "Le fromage "
+        }
+
+        console.log(`A : Désolé, je dois déja mettre une branlée à ${adversaire.name} !`)
+
+        console.log(`M : Tu as peut etre ${champion.age-adversaire.age} ans de plus que moi , mais moi je fais ${adversaire.taille-champion.taille} cm de plus que toi !`)
+
+        	for (let prochainTournoi = 7 ; prochainTournoi > 0 ; prochainTournoi --){
+        		console.log(`il reste ${prochainTournoi} jours pour s'entrainer`)
+        	}
+
+        console.log(adversaire.name.length)
+
+
+
+
+    </script>
+</body>
+</html>
