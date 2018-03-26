@@ -8,12 +8,11 @@
 </head>
 <body>
     <script>
-            // FUNCTION QUI RENVOIE UN NOMbre ALEATOIRE
+         
             const randomNumber = (min, max) => {
             return Math.floor(Math.random() * (max - min + 1) + min);
             }
-
-            // BOUCLE QUI TESTE LA FUNCTION DU NOMBRE ALEATOIRE
+                // j'ai mis 0 et 36 pour en faire un début de jeu de roulette 
             for (let i = 0; i < 100; i++) {
         console.log(randomNumber(0, 36))
 }
