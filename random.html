@@ -1,21 +1,37 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Méteo</title>
+  </head>
+  <body> 
+    <h1> Le temps dans ta ville :</h1>
+      <form>
+          <div class="row">
+            <div class="col">
+              <input id= "city" type="text" class="form-control" placeholder="city name">
+            </div>
+          </div>
+        </form>
+    <button id ="myBtn">Click me</button>
+    <div id='output'></div>
     <script>
-         
-            const randomNumber = (min, max) => {
-            return Math.floor(Math.random() * (max - min + 1) + min);
-            }
-                // j'ai mis 0 et 36 pour en faire un début de jeu de roulette 
-            for (let i = 0; i < 500; i++) {
-        console.log(randomNumber(0, 36))
-}
+      const callOpenWatherMapApi = () => {
+        const city = document.getElementById("city").value  
+          const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=0f8efd2ef3e9832b04d3fe24c299a711`
+          fetch(url)
+          .then((reponse) => {
+              return reponse.json()        
+        })
+          .then((weather) => {
+            output.innerHTML = (`A ${city}, il fait ${weather.main.temp} °c. `)      
+        })
+      }
+      document.getElementById("myBtn").addEventListener ("click", callOpenWatherMapApi)
     </script>
-</body>
+  </body>
 </html>
+view rawHTTP_Request hosted with ❤ by GitHub
