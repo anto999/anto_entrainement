@@ -9,28 +9,17 @@
 <body>
     <script>
          
-          let array = ["a"];
-          console.log(array)
-          let a =  (min, max) => {
-            return Math.floor(Math.random() * (max - min + 1) + min);
-            }
-         
+const arrayRandom = () => {
+  let array = [] 
+    for (let i = 0; i < 5; i++) {
+      const entierAleatoire = Math.floor(Math.random() * 10 + 1)
+      numberPush = array.push(entierAleatoire)
+    }
+    return array
+}
 
-             
-          
-          
-        
-
-          for (let i = 0 ; i < 5 ; i++){
-                array.push(i)
-                console.log(`compteur : ${i} `)
-                
-            }
-            console.log(array)
-
-
-
-
+arrayRandom()
+  
           
     </script>
 </body>
